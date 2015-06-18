@@ -11,7 +11,7 @@ RUN DEBIAN_FRONTEND=noninteractive sh -c '( \
 
 RUN useradd -ms /bin/bash strong-pm \
     && chown -R strong-pm:strong-pm /usr/local \
-    && su strong-pm -c "npm install -g strong-pm && npm cache clear"
+    && su strong-pm -c "npm install -g strong-pm grunt-cli bower && npm cache clear"
 
 WORKDIR /home/strong-pm
 ENV HOME=/home/strong-pm PORT=3000
