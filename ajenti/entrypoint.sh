@@ -25,6 +25,10 @@ else
     echo "=> Using an existing volume of MySQL"
 fi
 
+mkdir /var/www/sites
+chown www-data:www-data /var/www/sites
+chmod 775 /var/www/sites
+
 service mysql start
 
 /usr/bin/ajenti-panel
